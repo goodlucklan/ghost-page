@@ -1,7 +1,17 @@
-import React from 'react'
+import { Button, Card } from "@mui/material";
+import React, { useState } from "react";
+import { FormRegister } from "../components/FormRegister";
 
 export const Home = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Card sx={{ minWidth: 275, margin: 10, padding: 5 }}>
+        <Button variant="contained" onClick={() => setOpenModal(true)}>
+          Registrate
+        </Button>
+      </Card>
+      <FormRegister open={openModal} onClose={() => setOpenModal(false)} />
+    </>
+  );
+};
