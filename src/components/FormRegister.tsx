@@ -1,6 +1,16 @@
 import React from "react";
 import Dialog from "@mui/material/Dialog";
-import { Button, Card, DialogTitle, Divider, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  DialogTitle,
+  Divider,
+  FormControl,
+  Input,
+  InputLabel,
+  TextField,
+} from "@mui/material";
 
 interface Props {
   open: boolean;
@@ -11,16 +21,15 @@ export const FormRegister: React.FC<Props> = (props) => {
   const { open, onClose } = props;
   return (
     <Dialog open={open} onClose={onClose} sx={{ minWidth: 275 }}>
-      <Card sx={{ padding: 4, margin: 4 }} variant="outlined">
-      <DialogTitle>Registrate</DialogTitle>
-        <TextField
-          required
-          id="outlined-required"
-          label="Required"
-          placeholder="Identidad de usuario"
-          sx={{ padding: 1 }}
-          fullWidth
-        />
+      <Box component={"form"} sx={{ padding: 4, margin: 4 }}>
+        <DialogTitle>Registrate</DialogTitle>
+
+        <FormControl variant="standard">
+          <InputLabel htmlFor="component-simple" >
+            Identidad de usuario
+          </InputLabel>
+          <Input id="component-simple" fullWidth/>
+        </FormControl>
         <TextField
           required
           id="outlined-required"
@@ -54,9 +63,16 @@ export const FormRegister: React.FC<Props> = (props) => {
           sx={{ padding: 1 }}
           fullWidth
         />
-        <Divider/>
-        <Button sx={{marginTop: 4}} type="button" variant="contained" fullWidth>Aceptar</Button>
-      </Card>
+        <Divider />
+        <Button
+          sx={{ marginTop: 4 }}
+          type="button"
+          variant="contained"
+          fullWidth
+        >
+          Aceptar
+        </Button>
+      </Box>
     </Dialog>
   );
 };
