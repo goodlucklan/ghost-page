@@ -24,16 +24,14 @@ export const FormRegister: React.FC<Props> = (props) => {
       <Box component={"form"} sx={{ padding: 4, margin: 4 }}>
         <DialogTitle>Registrate</DialogTitle>
 
-        <FormControl variant="standard">
-          <InputLabel htmlFor="component-simple" >
-            Identidad de usuario
-          </InputLabel>
-          <Input id="component-simple" fullWidth/>
-        </FormControl>
         <TextField
-          required
           id="outlined-required"
-          label="Required"
+          placeholder="Identidad del usuario"
+          sx={{ padding: 1 }}
+          fullWidth
+        />
+        <TextField
+          id="outlined-required"
           placeholder="Nombre"
           sx={{ padding: 1 }}
           fullWidth
@@ -41,7 +39,6 @@ export const FormRegister: React.FC<Props> = (props) => {
         <TextField
           type={"password"}
           id="outlined-required"
-          label="Required"
           placeholder="Ingresa tu Contraseña"
           sx={{ padding: 1 }}
           fullWidth
@@ -49,16 +46,13 @@ export const FormRegister: React.FC<Props> = (props) => {
         <TextField
           type={"password"}
           id="outlined-required"
-          label="Required"
           placeholder="Repite la Contraseña"
           sx={{ padding: 1 }}
           fullWidth
         />
         <TextField
           type={"email"}
-          required
           id="outlined-required"
-          label="Required"
           placeholder="Ingrese su correo"
           sx={{ padding: 1 }}
           fullWidth
