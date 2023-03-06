@@ -8,6 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [count, setCount] = React.useState(0);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
