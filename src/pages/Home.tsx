@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FormRegister } from "../components/FormRegister";
 
 export const Home = () => {
-  console.log("aca");
+  
   const [openModal, setOpenModal] = useState(false);
   return (
     <>
